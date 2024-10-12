@@ -1,3 +1,29 @@
+## Terraform installation 
+
+```
+# Fetch the latest Terraform version number
+terraform_version=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M '.current_version')
+
+# Download the Terraform zip file for the latest version
+curl -O "https://releases.hashicorp.com/terraform/${terraform_version}/terraform_${terraform_version}_linux_amd64.zip"
+
+# Unzip the downloaded Terraform archive, using the '-o' flag to overwrite existing files
+unzip -o terraform_${terraform_version}_linux_amd64.zip
+
+# Create a directory for local binaries if it doesn't exist
+mkdir -p ~/bin
+
+# Move the Terraform binary to your local bin directory
+mv terraform ~/bin/
+
+# Ensure the ~/bin directory is in your PATH (you might want to add this to your .bashrc or .bash_profile)
+export PATH=$PATH:~/bin
+
+# Verify the Terraform installation by checking its version
+terraform version
+
+```
+
 ## After creating cluster run the following command
 
 ```
