@@ -52,7 +52,7 @@ name: aws-auth
 namespace: kube-system
 data:
 mapRoles: |
-    - rolearn: <ARN of instance role (not instance profile)> # <- EDIT THIS
+    - rolearn: <ARN of instance role (not instance profile)> #  EDIT THIS
     username: system:node:{{EC2PrivateDNSName}}
     groups:
         - system:bootstrappers
