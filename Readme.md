@@ -1,3 +1,13 @@
+## To Setup EKS Cluster you need to install AWS CLI and Kubectl
+
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+```
+
+
 ## Terraform installation 
 
 ```
