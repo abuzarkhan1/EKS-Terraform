@@ -112,5 +112,5 @@ kubectl get node -o wide
 ## Then Go to EKS node Security group and add Type: Custom TCP Port Range: 30000 - 32768 Source: My IP
 
 ```
-Finish.
+Finish
 ```
