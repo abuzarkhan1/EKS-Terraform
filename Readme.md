@@ -1,3 +1,36 @@
+## Docker Installaton
+
+```
+sudo apt-get update
+sudo apt-get install docker.io -y
+sudo usermod -aG docker $USER   #my case is ubuntu
+newgrp docker
+sudo chmod 777 /var/run/docker.sock
+```
+
+## Jenkins Installation
+
+### First JAVA
+
+```
+sudo apt update
+sudo apt install fontconfig openjdk-17-jre
+java -version
+
+```
+
+## Now jenkins
+
+```
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins -y
+```
+
 ## To Setup EKS Cluster you need to install AWS CLI and Kubectl
 
 ```
